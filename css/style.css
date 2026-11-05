@@ -363,7 +363,7 @@ body {
     color: var(--text-color);
     line-height: 1.15;
     display: block;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-2 .box-top .text-description {
@@ -374,7 +374,7 @@ body {
 }
 
 .section-2 .box-top .text-description p {
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-2 .box-bottom {
@@ -502,7 +502,7 @@ body {
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     max-width: 50em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-3 .container {
@@ -555,7 +555,7 @@ body {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
     max-width: 20em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-3 .feature-list {
@@ -591,7 +591,7 @@ body {
     color: #ffffff;
     line-height: 1.25;
     max-width: 16em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-3 .feature-desc {
@@ -600,7 +600,7 @@ body {
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     max-width: 32.5em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-3 .compare-box {
@@ -654,7 +654,7 @@ body {
     font-weight: 400;
     line-height: 1.4;
     max-width: 24.5em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-3 .feature-right {
@@ -708,7 +708,7 @@ body {
     line-height: 1.6;
     text-align: center;
     max-width: 44em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-4 .step-nav-wrapper {
@@ -814,7 +814,7 @@ body {
     line-height: 1.25;
     display: block;
     max-width: 14em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-4 .dashboard-desc {
@@ -823,7 +823,7 @@ body {
     color: var(--text-description);
     line-height: 1.6;
     max-width: 26em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-4 .feature-items {
@@ -873,7 +873,7 @@ body {
     color: var(--text-description);
     line-height: 1.5;
     max-width: 25.5em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-4 .dashboard-right {
@@ -957,7 +957,7 @@ body {
     color: var(--text-description);
     line-height: 1.6;
     max-width: 27.5em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-5 .text-tagline {
@@ -1006,7 +1006,7 @@ body {
     color: var(--text-description);
     line-height: 1.6;
     max-width: 25.5em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-6 {
@@ -1040,7 +1040,7 @@ body {
     line-height: 1.6;
     text-align: center;
     max-width: 40em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-6 .pricing-filters {
@@ -1229,7 +1229,7 @@ body {
 }
 
 .section-6 .pricing-card .features-list li span {
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-6 .pricing-card.enterprise .features-list li {
@@ -1336,7 +1336,7 @@ body {
     color: var(--text-description);
     line-height: 1.6;
     max-width: 34em;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-7 .box-bottom {
@@ -1577,7 +1577,7 @@ body {
     color: var(--primary-color);
     line-height: 1.45;
     margin-bottom: 0;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .section-8 .box-bottom {
@@ -1695,7 +1695,7 @@ body {
     color: #fff;
     line-height: 1.6;
     margin-bottom: 0;
-    white-space: pre-line;
+    white-space: nowrap;
 }
 
 .footer .footer-copy {
@@ -1719,6 +1719,30 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1399.98px) {
+    .header .header-container {
+        max-width: 100% !important;
+        padding: 2rem;
+    }
+
+    .section-1 .container {
+        max-width: 100% !important;
+        padding: 4rem 2rem;
+    }
+
+    .section-1 .box-left .text-title span {
+        font-size: clamp(2.4rem, 3.2vw, 4.9rem);
+        white-space: nowrap;
+    }
+
+    .section-1 .box-left .text-description {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
+        max-width: 100%;
+    }
+
+    .section-1 .box-left .btn-group {
+        flex-wrap: wrap;
+    }
+
     .section-2 .container {
         max-width: 100% !important;
         padding: 4rem 2rem;
@@ -1728,13 +1752,27 @@ body {
         --bs-gutter-x: 1.4rem;
     }
 
+    .section-2 .text-title .text-1,
+    .section-2 .text-title .text-2 {
+        font-size: clamp(2.6rem, 3.5vw, 4.9rem);
+    }
+
+    .section-2 .text-title .text-description {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
+    }
+
     .section-2 .box-item {
         padding: 2.8rem 1.4rem;
         gap: 2rem;
     }
 
     .section-2 .box-top .text-title span {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 1.8vw, 2.2rem);
+    }
+
+    .section-2 .box-top .text-description,
+    .section-2 .box-top .text-description p {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
     }
 
     .section-2 .box-bottom .btn-group,
@@ -1751,6 +1789,15 @@ body {
         padding: 4.5rem 2rem;
     }
 
+    .section-3-box .text-title .text-1 {
+        font-size: clamp(2.6rem, 3.5vw, 4.9rem);
+    }
+
+    .section-3-box .text-title .text-description {
+        font-size: clamp(0.85rem, 1.2vw, 1.7rem);
+        max-width: 100%;
+    }
+
     .section-3 .top-cards {
         --bs-gutter-x: 1.4rem;
     }
@@ -1760,7 +1807,11 @@ body {
     }
 
     .section-3 .card-item .card-title {
-        font-size: 2.2rem;
+        font-size: clamp(1.6rem, 1.9vw, 2.2rem);
+    }
+
+    .section-3 .card-item .card-desc {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
     }
 
     .section-3 .feature-item>.col-md-6:has(.feature-left) {
@@ -1772,7 +1823,13 @@ body {
     }
 
     .section-3 .feature-title {
-        font-size: 3.2rem;
+        font-size: clamp(2.2rem, 2.6vw, 3.2rem);
+    }
+
+    .section-3 .feature-desc,
+    .section-3 .compare-box,
+    .section-3 .compare-text {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
     }
 
     .section-3 .compare-box {
@@ -1784,14 +1841,25 @@ body {
         padding: 0 2rem;
     }
 
+    .section-4 .text-title .text-1,
+    .section-4 .text-title .text-2 {
+        font-size: clamp(2.6rem, 3.5vw, 4.9rem);
+    }
+
     .section-4-box {
         padding: 3.5rem 2.4rem;
         gap: 3rem;
-        grid-template-columns: minmax(47.5rem, 1.3fr) 1.5fr;
+        grid-template-columns: 1.2fr 1.5fr;
     }
 
     .section-4 .dashboard-title {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 2.4vw, 2.8rem);
+    }
+
+    .section-4 .text-title .text-description,
+    .section-4 .dashboard-desc,
+    .section-4 .feature-desc {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
     }
 
     .section-5 {
@@ -1827,6 +1895,10 @@ body {
     .section-6 .container {
         max-width: 100% !important;
         padding: 0 2rem;
+    }
+
+    .section-6 .text-title .text-description {
+        font-size: clamp(0.95rem, 1.2vw, 1.7rem);
     }
 
     .section-6 .pricing-row {
@@ -1867,6 +1939,10 @@ body {
 
     .section-7 .box-left .text-description {
         font-size: clamp(0.95rem, 1.15vw, 1.7rem);
+    }
+
+    .section-8 .text-title .text-1 {
+        font-size: clamp(2.4rem, 3.2vw, 4.5rem);
     }
 
     .section-8 .product-list {
@@ -2030,17 +2106,17 @@ body {
     }
 
     .box-left .text-title span {
-        font-size: clamp(2.4rem, 7vw, 3.4rem);
+        font-size: clamp(2rem, 6.5vw, 3.4rem);
     }
 
     .box-left .text-description {
         width: 100%;
         max-width: 100%;
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
     }
 
     .section-1 .box-left .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
         white-space: nowrap;
     }
 
@@ -2079,11 +2155,12 @@ body {
 
     .section-2 .text-title .text-1,
     .section-2 .text-title .text-2 {
-        font-size: clamp(1.8rem, 5.6vw, 3.2rem);
+        font-size: clamp(1.7rem, 5.4vw, 3.2rem);
     }
 
     .section-2 .text-title .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.5vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-2 .box-item {
@@ -2131,11 +2208,12 @@ body {
     }
 
     .section-3-box .text-title .text-1 {
-        font-size: clamp(1.8rem, 5.6vw, 3.2rem);
+        font-size: clamp(1.7rem, 5.4vw, 3.2rem);
     }
 
     .section-3-box .text-title .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.6rem, 1.75vw, 1.35rem);
+        max-width: 100%;
     }
 
     .section-3 .top-cards {
@@ -2162,6 +2240,7 @@ body {
 
     .section-3 .card-item .card-desc {
         font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-3 .feature-list {
@@ -2178,18 +2257,20 @@ body {
     }
 
     .section-3 .feature-title {
-        font-size: clamp(1.8rem, 5.2vw, 2.8rem);
+        font-size: clamp(1.7rem, 5vw, 2.8rem);
     }
 
     .section-3 .feature-desc {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.5vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-3 .compare-box {
         padding: 1.4rem;
         border-radius: 1.6rem;
         gap: 1rem;
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.4vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-3 .compare-row {
@@ -2198,11 +2279,12 @@ body {
     }
 
     .section-3 .pill {
-        font-size: clamp(0.85rem, 2.4vw, 1.3rem);
+        font-size: clamp(0.8rem, 2.3vw, 1.3rem);
     }
 
     .section-3 .compare-text {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.4vw, 1.7rem);
+        max-width: 100%;
     }
 
     .order-1 {
@@ -2226,12 +2308,13 @@ body {
 
     .section-4 .text-title .text-1,
     .section-4 .text-title .text-2 {
-        font-size: clamp(1.8rem, 5.2vw, 3rem);
+        font-size: clamp(1.7rem, 5.2vw, 3rem);
         white-space: nowrap;
     }
 
     .section-4 .text-title .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.75rem, 2.25vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-4 .step-nav-wrapper {
@@ -2286,7 +2369,8 @@ body {
     }
 
     .section-4 .dashboard-desc {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-4 .feature-items {
@@ -2308,7 +2392,8 @@ body {
     }
 
     .section-4 .feature-desc {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-5 {
@@ -2330,11 +2415,12 @@ body {
     .section-5 .text-title .text-1,
     .section-5 .text-title .text-2,
     .section-5 .text-title .text-3 {
-        font-size: clamp(2.4rem, 6.5vw, 3.2rem);
+        font-size: clamp(2.2rem, 6.5vw, 3.2rem);
     }
 
     .section-5 .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-5 .text-tagline {
@@ -2359,7 +2445,8 @@ body {
     }
 
     .section-5 .feature-desc {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.85rem, 2.65vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-6 {
@@ -2368,11 +2455,12 @@ body {
     }
 
     .section-6 .text-title .text-1 {
-        font-size: clamp(2.4rem, 6.5vw, 3.2rem);
+        font-size: clamp(2.2rem, 6.5vw, 3.2rem);
     }
 
     .section-6 .text-title .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.5vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-6 .pricing-filters {
@@ -2418,8 +2506,8 @@ body {
     }
 
     .section-7 .box-left .text-title span {
-        font-size: clamp(2.2rem, 6.2vw, 3.2rem);
-        white-space: normal;
+        font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+        white-space: nowrap;
     }
 
     .section-7 .box-right {
@@ -2427,7 +2515,8 @@ body {
     }
 
     .section-7 .box-left .text-description {
-        font-size: clamp(0.95rem, 2.65vw, 1.7rem);
+        font-size: clamp(0.8rem, 2.55vw, 1.7rem);
+        max-width: 100%;
     }
 
     .section-7 .contact-title {
@@ -2492,7 +2581,7 @@ body {
     }
 
     .section-8 .text-title .text-1 {
-        font-size: clamp(2.2rem, 6.2vw, 3.2rem);
+        font-size: clamp(1.6rem, 5vw, 3.2rem);
     }
 
     .section-8 .top-cards {
