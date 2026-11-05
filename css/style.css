@@ -263,21 +263,30 @@ body {
     display: block;
 }
 
+.img-group,
 .box-right .img-group {
-    position: absolute;
-    top: 75%;
-    right: 0%;
-    transform: translateY(-50%);
+    position: fixed;
+    bottom: 3rem;
+    right: 2.4rem;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
+.img-group img,
 .box-right .img-group img {
     width: 4.5rem;
     height: auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.img-group img:hover,
+.box-right .img-group img:hover {
+    transform: scale(1.1);
 }
 
 .section-2 {
@@ -2140,13 +2149,16 @@ body {
         margin-top: 1rem;
     }
 
+    .img-group,
     .box-right .img-group {
-        right: 0;
+        right: 1.4rem;
+        bottom: 2rem;
         gap: 1rem;
     }
 
+    .img-group img,
     .box-right .img-group img {
-        width: clamp(3rem, 8vw, 4rem);
+        width: clamp(3.4rem, 9vw, 4.2rem);
     }
 
     .section-2 .container {
