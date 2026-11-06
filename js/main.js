@@ -162,5 +162,27 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
+
+    const btnTop = document.querySelector('.btn-top');
+    if (btnTop) {
+        const toggleBtnTop = () => {
+            if (window.scrollY > 300) {
+                btnTop.classList.add('show');
+            } else {
+                btnTop.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleBtnTop, { passive: true });
+        toggleBtnTop();
+
+        btnTop.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
 
